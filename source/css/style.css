@@ -1,0 +1,139 @@
+:root {
+    --primary-color: #fff;
+    --secondary-color: #fff;
+    --first-font: 'Poppins', sans-serif;
+    --second-font: 'Rubik', sans-serif;
+    --third-font: 'Merriweather', serif;
+    --main-gradient: linear-gradient(0.25turn, #6833e4, #734bd1, #8257e5, #6833e4 );
+    --second-gradient: linear-gradient(0deg, #ccc, #fff 100%, #ccc);
+    --border-purple: 2px solid #6833e4;
+    --radial-gradient: radial-gradient(# #6833e4, #734bd1, #8257e5, #6833e4)
+}
+
+.container {
+    background-color: antiquewhite;
+    height: 300vh;
+    display: flex;
+}
+
+/* LADO ESQUERDO */
+
+.main-content {
+    background-color: teal;
+    width: 60vw;
+}
+
+.content {
+    height: 100vh;
+}
+
+
+/* LADO DIREITO */
+
+.aside-content {
+    background-color: darkslategray;
+    width: 40vw;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+   
+}
+
+.header-aside-content{
+    width: 40vw;
+    background-image: var(--second-gradient);
+    height: 10vh;
+   
+}
+
+.navigation-header{
+    margin-top: 0;
+}
+
+.navigation-header ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    height: 10vh;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+   
+}
+
+.navigation-header ul li{
+    border-bottom: 2px solid #6833e4;
+    font-family: var(--first-font);
+    padding-bottom: 10px;
+}
+
+.main-aside-content{
+    height: 90vh;
+    background-color: #fff;
+    display: grid;
+    grid-template-rows: 2fr 5fr 1fr;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    background-image: var(--second-gradient);
+}
+
+.text-container-top{
+    grid-row: 1/2;
+    font-family: var(--first-font);
+   
+}
+
+.my-name{
+    font-size: 4rem;
+    width: 20vw;
+    margin-top: 40px;
+    border-bottom: var(--border-purple);
+   
+}
+
+.my-function{
+    text-align: right;
+    font-weight: 200;
+    font-style: italic;
+    font-family: var(--second-font);
+}
+
+.image-aside-container{
+    width: 300px;
+    height: 300px;
+    justify-self: center;
+    grid-row: 2/3;
+    background-image: url('../img/eu.jfif'), var(--main-gradient);
+    background-blend-mode: hard-light;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 15px;
+}
+
+.footer-aside-container{
+    font-family: var(--second-font);
+    grid-row: 3/4;
+}
+
+.footer-title{
+    text-align: center;
+    font-weight: 400;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.contact {
+    position: sticky;
+    right: 0;
+    width: 40vw;
+    z-index: 10;
+    margin-top: 200vh;
+    background-color: aquamarine;
+    margin-left: -15px;
+}
+

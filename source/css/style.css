@@ -1,25 +1,26 @@
 :root {
-    --primary-color: #fff;
-    --secondary-color: #fff;
+    --first-color: #fff;
+    --second-color: #fff;
     --first-font: 'Poppins', sans-serif;
     --second-font: 'Rubik', sans-serif;
     --third-font: 'Merriweather', serif;
-    --main-gradient: linear-gradient(0.25turn, #6833e4, #734bd1, #8257e5, #6833e4 );
+    --main-gradient: linear-gradient(0.25turn, #6833e4, #734bd1, #8257e5, #6833e4);
     --second-gradient: linear-gradient(0deg, #ccc, #fff 100%, #ccc);
+    --radial-gradient: radial-gradient( #6833e4, #734bd1, #8257e5, #6833e4);
     --border-purple: 2px solid #6833e4;
-    --radial-gradient: radial-gradient(# #6833e4, #734bd1, #8257e5, #6833e4)
 }
 
 .container {
     background-color: antiquewhite;
     height: 300vh;
     display: flex;
+    color: #16161f;
 }
 
 /* LADO ESQUERDO */
 
+/* HOME */
 .main-content {
-    background-color: teal;
     width: 60vw;
 }
 
@@ -27,6 +28,132 @@
     height: 100vh;
 }
 
+.element1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url('../img/einstein.png'), var(--main-gradient);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    color: var(--first-color);
+}
+
+.quote-citation {
+    font-size: 4rem;
+    width: 40vw;
+    text-align: justify;
+    font-style: italic;
+    font-family: var(--third-font);
+    font-weight: 400;
+}
+
+.author-quote {
+    text-align: right;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 300;
+}
+
+
+.footer-first-section {
+    padding-top: 20vh;
+    font-family: var(--third-font);
+}
+
+/* ABOUT */
+
+.about {
+    background-image: var(--second-gradient);
+}
+
+.about-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.about-main-content {
+    width: 30vw;
+    margin: 20px;
+}
+
+.float-left {
+    float: left;
+    margin-right: 20px;
+}
+
+.about-content {
+    text-align: justify;
+    font-size: 20px;
+    font-family: var(--first-font);
+}
+
+.float-right {
+    float: right;
+    margin-left: 20px;
+}
+
+.about-me-title {
+    font-size: 4rem;
+    font-family: var(--first-font);
+    background-color: var(--second-gradient);
+}
+
+.about-title {
+    border-bottom: var(--border-purple);
+    padding-left: 5vw;
+    padding-top: 30px;
+}
+
+.image-fill {
+    width: 200px;
+    height: 150px;
+    background-color: red;
+    border-radius: 15px;
+}
+
+.portifolio {
+    background-image: var(--main-gradient);
+}
+
+.portifolio-title {
+    font-size: 4rem;
+    font-family: var(--first-font);
+}
+
+.portifilio-header {
+    border-bottom: 2px solid white;
+    padding-left: 5vw;
+    padding-top: 30px;
+    color: white;
+
+}
+
+.portifolio-content {
+    margin-top: 70px;
+    width: 55vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    width: 200px;
+    height: 200px;
+}
+
+.cor1{
+    background-color: wheat;
+}
+
+.cor2 {
+    background-color: limegreen;
+}
 
 /* LADO DIREITO */
 
@@ -36,104 +163,108 @@
     height: 100vh;
     position: fixed;
     right: 0;
-   
+    box-shadow: -5px 0 15px #16161f;
 }
 
-.header-aside-content{
+.header-aside-content {
     width: 40vw;
-    background-image: var(--second-gradient);
     height: 10vh;
-   
+    background-image: var(--second-gradient);
+    box-shadow: 10px 5px rgba(0, 0, 12, 0.5);
+    
 }
 
-.navigation-header{
-    margin-top: 0;
-}
-
-.navigation-header ul{
+.navigation-header ul {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
     height: 10vh;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    
    
 }
 
-.navigation-header ul li{
-    border-bottom: 2px solid #6833e4;
+.navigation-header ul li {
+    border-bottom: var(--border-purple);
+    padding: 0 10px 10px;
     font-family: var(--first-font);
-    padding-bottom: 10px;
 }
 
-.main-aside-content{
+.main-aside-content {
     height: 90vh;
-    background-color: #fff;
+    background-image: var(--second-gradient);
     display: grid;
     grid-template-rows: 2fr 5fr 1fr;
-    height: 90vh;
     align-items: center;
     justify-content: center;
-    background-image: var(--second-gradient);
 }
 
-.text-container-top{
+.text-container-top {
     grid-row: 1/2;
     font-family: var(--first-font);
-   
 }
 
-.my-name{
+/* TOP ASIDE CONTENT */
+
+.my-name {
     font-size: 4rem;
     width: 20vw;
     margin-top: 40px;
+    padding-bottom: 10px;
     border-bottom: var(--border-purple);
-   
 }
 
-.my-function{
+.my-function {
     text-align: right;
     font-weight: 200;
     font-style: italic;
     font-family: var(--second-font);
 }
 
-.image-aside-container{
+/* IMAGE ASIDE CONTENT */
+
+.image-aside-container {
     width: 300px;
     height: 300px;
     justify-self: center;
     grid-row: 2/3;
-    background-image: url('../img/eu.jfif'), var(--main-gradient);
-    background-blend-mode: hard-light;
+    background-image: url('../img/eu.jfif'), var(--radial-gradient) ;
     background-repeat: no-repeat;
+    background-blend-mode: overlay;
     background-size: contain;
     border-radius: 15px;
 }
 
-.footer-aside-container{
+
+
+/* FOOTER ASIDE CONTENT */
+.footer-aside-container {
     font-family: var(--second-font);
     grid-row: 3/4;
 }
+
 
 .footer-title{
     text-align: center;
     font-weight: 400;
 }
 
-.footer-links{
+.footer-links {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
 }
+
+
+/* CONTATO */
 
 .contact {
     position: sticky;
     right: 0;
     width: 40vw;
     z-index: 10;
-    margin-top: 200vh;
+    margin-top: 210vh;
     background-color: aquamarine;
     margin-left: -15px;
 }
-
